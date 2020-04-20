@@ -11,16 +11,16 @@
 
 <script>
 export default {
+  // Reciving props from parent App.vue
+  props:{
+    ranas:{
+      type:Array,
+      required:true
+    }
+  },
   data(){
     return {
-      ranas:[
-        {name:'Md Juyel Rana', speciality:'Lovely Boy', show:false},
-        {name:'Md Ashraful Islam', speciality:'Bad Boy', show:false},
-        {name:'Md Afzal Hossain', speciality:'Traitor', show:false},
-        {name:'Md Jalal Uddin', speciality:'Good Man', show:false},
-        {name:'Most Rokey Begum', speciality:'Good Woman', show:false},
-        {name:'Most Mukti Khatun', speciality:'Bootliker', show:false},
-      ]
+
     }
   }
 }

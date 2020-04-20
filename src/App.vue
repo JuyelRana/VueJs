@@ -1,9 +1,9 @@
 <template>
   <div>
     <App-Header/>
-    <App-Ranas/>
+    <!-- Passing props -->
+    <App-Ranas :ranas="ranas"/>
     <App-Footer/>
-
   </div>
 </template>
 
@@ -21,7 +21,14 @@ export default {
   },
   data(){
     return {
-
+      ranas:[
+        {name:'Md Juyel Rana', speciality:'Lovely Boy', show:false},
+        {name:'Md Ashraful Islam', speciality:'Bad Boy', show:false},
+        {name:'Md Afzal Hossain', speciality:'Traitor', show:false},
+        {name:'Md Jalal Uddin', speciality:'Good Man', show:false},
+        {name:'Most Rokey Begum', speciality:'Good Woman', show:false},
+        {name:'Most Mukti Khatun', speciality:'Bootliker', show:false},
+      ]
     }
   }
 }
