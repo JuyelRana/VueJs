@@ -1,98 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Vujs Start</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-<body>
-  <div id="app">
-
-    <h1>List of Data 1</h1>
-    <ul>
-      <li v-for="(character, index) in characters">{{ ++index}}   {{ character}}</li>
-    </ul>
-
-    <h1>List of Data 2 </h1>
-    <ul>
-      <li v-for="(rana, index) in ranas">{{ ++index}}   {{ rana.name }} - {{ rana.age }}</li>
-    </ul>
-
-    <h1>Template 1</h1>
-    <template v-for="(rana, index) in ranas">
-      <h3>{{ ++index }} {{ rana.name }}</h3>
-      <p>{{ rana.age }}</p>
-    </template>
-
-    <h1>Template 2</h1>
-    <template v-for="rana in ranas">
-      <div v-for="(val,key) in rana">
-        <p> {{ key }} : {{ val }}</p>
-      </div>
-    </template>
-
-    <h1>Conditionals</h1>
-    <button @click="error = !error">Toggle Error</button>
-    <button @click="success = !success">Toggle Success</button>
-
-    <!-- <p v-if="error">There has been an error!</p>
-    <p v-else-if="success">Whooo, Success!</p> -->
-
-    <p  v-show="error">There has been an error!</p>
-    <p  v-show="success">Whooo, Success!</p>
-
-    <h1>Dynamic CSS</h1>
-    <h2>Example 1</h2>
-    <div :class="{available:available}" @click="available = !available">
-      <span>{{ name }}</span>
-    </div>
-    <h2>Example 2</h2>
-
-    <button @click="available = !available">Change Available</button>
-    <button @click="nearby = !nearby"> Change Nearby</button>
-
-    <div :class="changeClasses">
-      <span>{{ name }}</span>
-    </div>
-
-    <h1>Computed Properties</h1>
-    <button @click="a++">Add to A</button>
-    <button @click="b++">Add to B</button>
-    <p> A - {{ a }}</p>
-    <p> B - {{ b }}</p>
-    <p> Age + A = {{ addToA }}</p>
-    <p> Age + B = {{ addToB }}</p>
-
-    <label>Name: </label>
-    <input type="text" v-model="name" placeholder="Name">
-    <br>
-    <span>{{ name }}</span><br>
-    <label>Age: </label>
-    <input type="text" v-model="age" placeholder="Age"><br>
-    <span>{{ age }}</span>
-    <h2>{{ greet('After Noon') }}</h2>
-    <a :href="website" target="_blank">shaorinacademy</a>
-    <input type="text" name="" :value="website">
-    <p>Name: {{ name }}</p>
-    <p>Job: {{ job }}</p>
-
-    <p v-html="websiteTag">Bany</p>
-
-    <h1>Start Click Event</h1>
-    <button @click.once="add(1)">Add</button>
-    <button @click="substract(1)">Subtraction</button>
-    <button @dblclick="add(10)">Add 10</button>
-    <button @dblclick="substract(10)">Subtraction 10</button>
-    <a @click.prevent="clickOrin" href="http://shaorinacademy.com/">shaorinacademy</a>
-
-    <p>My age is {{ age }}</p>
-
-    <div id="canvas" v-on:mousemove="updateXY">
-      {{ x }}, {{ y }}
-    </div>
-
-  </div>
-  <script src="app.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>second-app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
