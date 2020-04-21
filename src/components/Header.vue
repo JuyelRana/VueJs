@@ -1,15 +1,25 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 @click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
 <script>
 
 export default {
+  props:{
+    title:{
+      type:String
+    }
+  },
   data(){
     return {
-      title: 'Juyel Rana'
+      title: this.title
+    }
+  },
+  methods:{
+    changeTitle(){
+      this.title = "Rana Ahmmed";
     }
   }
 }

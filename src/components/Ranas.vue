@@ -6,6 +6,7 @@
         <h3 v-show="rana.show">{{ rana.speciality }}</h3>
       </li>
     </ul>
+    <button @click="deleteRana">Delete Rana</button>
   </div>
 </template>
 
@@ -21,6 +22,11 @@ export default {
   data(){
     return {
 
+    }
+  },
+  methods:{
+    deleteRana(){
+      this.ranas.pop();
     }
   }
 }

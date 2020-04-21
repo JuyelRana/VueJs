@@ -1,9 +1,11 @@
 <template>
   <div>
-    <App-Header/>
-    <!-- Passing props -->
+    <!-- Passing props primitive types  -->
+    <App-Header :title="title"/>
+    <!-- Passing props => reference type -->
     <App-Ranas :ranas="ranas"/>
-    <App-Footer/>
+    <!-- Passing props primitive types  -->
+    <App-Footer :title="title"/>
   </div>
 </template>
 
@@ -28,7 +30,8 @@ export default {
         {name:'Md Jalal Uddin', speciality:'Good Man', show:false},
         {name:'Most Rokey Begum', speciality:'Good Woman', show:false},
         {name:'Most Mukti Khatun', speciality:'Bootliker', show:false},
-      ]
+      ],
+      title:"Juyel Rana",
     }
   }
 }
