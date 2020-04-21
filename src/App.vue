@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- Passing props primitive types  -->
-    <App-Header :title="title"/>
+    <!-- Taking an event from header component -->
+    <!-- shortcut for v-bind: => : and shortcut for v-on: => @ -->
+    <App-Header :title="title" @changeTitle="updateTitle($event)"/>
     <!-- Passing props => reference type -->
     <App-Ranas :ranas="ranas"/>
     <!-- Passing props primitive types  -->
@@ -32,6 +34,12 @@ export default {
         {name:'Most Mukti Khatun', speciality:'Bootliker', show:false},
       ],
       title:"Juyel Rana",
+    }
+  },
+
+  methods:{
+    updateTitle(updatedData){
+      this.title = updatedData.name + '=>'+updatedData.age;
     }
   }
 }

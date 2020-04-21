@@ -19,7 +19,7 @@ export default {
   },
   methods:{
     changeTitle(){
-      this.title = "Rana Ahmmed";
+      this.$emit('changeTitle', {name:'Rana Khan', age:24});
     }
   }
 }
