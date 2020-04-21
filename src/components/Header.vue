@@ -29,7 +29,7 @@ export default {
     bus.$on('changeTitle',(data)=>{
       this.title = data.name + '=>'+data.age;
     });
-    
+
     bus.$on('changeFooterTitle',(data)=>{
       this.title = data.name + '=>'+data.age;
     });
