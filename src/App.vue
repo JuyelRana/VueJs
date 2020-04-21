@@ -7,7 +7,7 @@
     <!-- Passing props => reference type -->
     <App-Ranas :ranas="ranas"/>
     <!-- Passing props primitive types  -->
-    <App-Footer :title="title"/>
+    <App-Footer :title="title" @changeFooterTitle="updateFooterTitle($event)"/>
   </div>
 </template>
 
@@ -39,6 +39,9 @@ export default {
 
   methods:{
     updateTitle(updatedData){
+      this.title = updatedData.name + '=>'+updatedData.age;
+    },
+    updateFooterTitle(updatedData){
       this.title = updatedData.name + '=>'+updatedData.age;
     }
   }
