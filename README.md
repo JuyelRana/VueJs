@@ -1,4 +1,4 @@
-# third-app
+# blog
 
 > A Vue.js project
 

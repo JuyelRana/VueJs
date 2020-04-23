@@ -1,32 +1,21 @@
 <template>
   <div>
-    <!-- This tag will alive a component -->
-    <keep-alive>
-      <component v-bind:is="component"></component>
-    </keep-alive>
-    <button @click="component='FormOne'">Form One</button>
-    <button @click="component='FormTwo'">Form Two</button>
-
+    <AddBlog></AddBlog>
   </div>
 </template>
 
 <script>
 
-import FormOne from './components/FormOne';
-import FormTwo from './components/FormTwo';
+import AddBlog from './components/AddBlog';
 
 export default {
   components:{
-    'FormOne': FormOne,
-    'FormTwo': FormTwo
+    'AddBlog':AddBlog
   },
   data(){
     return {
-      component:'FormOne'
-    }
-  },
-  methods:{
 
+    }
   }
 }
 </script>
