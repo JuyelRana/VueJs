@@ -1,36 +1,28 @@
 <template>
   <div>
-    <FormHelper>
-      <div slot="form-header">
-        <h3>This is the title of the form</h3>
-        <p>Information about the form</p>
-      </div>
-
-      <div slot="form-fields">
-        <input type="text" placeholder="name" required>
-        <input type="password" placeholder="password" required>
-      </div>
-
-      <div slot="form-controls">
-        <button @click="handleSubmit">Submit</button>
-      </div>
-
-    </FormHelper>
+    <!-- This tag will alive a component -->
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button @click="component='FormOne'">Form One</button>
+    <button @click="component='FormTwo'">Form Two</button>
 
   </div>
 </template>
 
 <script>
 
-import FormHelper from './components/FormHelper';
+import FormOne from './components/FormOne';
+import FormTwo from './components/FormTwo';
 
 export default {
   components:{
-    'FormHelper': FormHelper
+    'FormOne': FormOne,
+    'FormTwo': FormTwo
   },
   data(){
     return {
-      title:'I am a dynamic title..'
+      component:'FormOne'
     }
   },
   methods:{
