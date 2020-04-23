@@ -1,4 +1,4 @@
-# second-app
+# third-app
 
 > A Vue.js project
 
