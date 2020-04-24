@@ -67,11 +67,8 @@ export default {
   },
   methods:{
     post(){
-      this.$http.post('https://jsonplaceholder.typicode.com/posts',{
-        title:this.blog.title,
-        body:this.blog.content,
-        userId: 1
-      }).then(function(data){
+      this.$http.post('https://blog-50e98.firebaseio.com/posts.json', this.blog)
+      .then((data)=>{
         console.log(data);
         this.submitted = true;
       });
