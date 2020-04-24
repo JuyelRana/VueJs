@@ -25,6 +25,8 @@ Vue.directive('theme',{
       el.style.maxWidth = "1200px";
     }else if (binding.value == 'narrow') {
       el.style.maxWidth = "560px";
+    }else if (binding.value == 'middle') {
+      el.style.maxWidth = '800px';
     }
 
     if(binding.arg == 'column'){
@@ -40,7 +42,7 @@ Vue.filter('to-uppercase', (value) => {
 });
 
 Vue.filter('snippet', (value) => {
-  return value.slice(0,70)+"....";
+  return value.slice(0,110)+"....";
 });
 
 /* eslint-disable no-new */
