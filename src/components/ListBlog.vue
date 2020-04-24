@@ -22,8 +22,17 @@ export default {
   methods:{
   },
   created(){
-    this.$http.get('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-      this.blogs = response.body.slice(10,20);
+    this.$http.get('https://blog-50e98.firebaseio.com/posts.json').then((response)=>{
+      return response.json();
+    }).then((data)=>{
+      var blogsArray = [];
+      for(let key in data){
+        data[key].id = key;
+        blogsArray.push(data[key]);
+      }
+
+      this.blogs = blogsArray;
+
     });
   },
   computed:{

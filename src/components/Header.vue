@@ -3,6 +3,7 @@
     <ul>
       <li><router-link to="/" exact>Blog</router-link></li>
       <li><router-link to="/add" exact>Add A New Blog</router-link></li>
+      <li><router-link to="/list" exact>Blog Lists</router-link></li>
     </ul>
   </nav>
 </template>

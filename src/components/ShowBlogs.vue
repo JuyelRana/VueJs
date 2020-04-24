@@ -6,7 +6,7 @@
       <router-link v-bind:to="'/blog/'+blog.id">
         <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
       </router-link>
-      <article>{{ blog.body | snippet }}</article>
+      <article>{{ blog.content | snippet }}</article>
     </div>
   </div>
 </template>
@@ -25,8 +25,17 @@ export default {
   methods:{
   },
   created(){
-    this.$http.get('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-      this.blogs = response.body.slice(10,100);
+    this.$http.get('https://blog-50e98.firebaseio.com/posts.json').then((response)=>{
+      return response.json();
+    }).then((data)=>{
+      var blogsArray = [];
+      for(let key in data){
+        data[key].id = key;
+        blogsArray.push(data[key]);
+      }
+
+      this.blogs = blogsArray;
+
     });
   },
   computed:{
