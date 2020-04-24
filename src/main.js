@@ -13,11 +13,11 @@ Vue.use(VueResource);
 //   }
 // });
 
-Vue.directive('divcolor',{
-  bind(el,binding, vnode){
-    el.style.background = "#"+Math.random().toString().slice(2,8);
-  }
-});
+// Vue.directive('divcolor',{
+//   bind(el,binding, vnode){
+//     el.style.background = "#"+Math.random().toString().slice(2,8);
+//   }
+// });
 
 // Vue.directive('theme',{
 //   bind(el,binding,vnode){
