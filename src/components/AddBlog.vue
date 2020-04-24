@@ -18,18 +18,30 @@
         <label>Mukti</label>
         <input type="checkbox" value="Mukti" v-model="blog.categories">
       </div>
+
+      <label>Author: </label>
+      <select v-model="blog.author">
+        <option v-for="(author, index) in authors">{{ author }}</option>
+      </select>
+      
     </form>
+
+
 
     <div id="preview">
       <h2>Preview Blog</h2>
       <p>Blog Title: {{ blog.title }}</p>
       <p>Blog Content:</p>
       <p>{{ blog.content }}</p>
-      <p>Blog Categories</p>
+      <p>Blog Categories:</p>
       <ul>
         <li v-for="(category,index) in blog.categories" :key="index">{{ ++index }} . {{ category }}</li>
       </ul>
+
+      <p>Author : {{ blog.author }}</p>
     </div>
+
+
   </div>
 </template>
 
@@ -40,8 +52,12 @@ export default {
       blog:{
         title: "",
         content: "",
-        categories:[]
-      }
+        categories:[],
+        author:""
+      },
+      authors:[
+        "Md Juyel Rana", "Md Jalal Uddin", "Most Rokey Begum", "Most Mukti Khatun"
+      ]
     }
   }
 }
