@@ -24,7 +24,7 @@ export default {
   },
   created(){
     this.$http.get('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-      this.blogs = response.body.slice(10,20);
+      this.blogs = response.body.slice(10,100);
     });
   },
   computed:{
@@ -68,6 +68,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+input[type="text"]{
+  display: block;
+  height: 25px;
+  width: 100%;
+}
+
 #show-blogs{
   max-width: 800px;
   margin: 0 auto;
