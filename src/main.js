@@ -34,6 +34,15 @@ Vue.directive('theme',{
   }
 });
 
+//Custom Filters
+Vue.filter('to-uppercase', (value) => {
+  return value.toUpperCase();
+});
+
+Vue.filter('snippet', (value) => {
+  return value.slice(0,70)+"....";
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
