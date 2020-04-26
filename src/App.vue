@@ -1,32 +1,60 @@
 <template>
-  <div>
-    <AppHeader/>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-
-import AddBlog from './components/AddBlog';
-import ShowBlogs from './components/ShowBlogs';
-import ListBlog from './components/ListBlog';
-import Header from './components/Header';
+import HelloWorld from './components/HelloWorld';
 
 export default {
-  components:{
-    'AddBlog':AddBlog,
-    'ShowBlogs':ShowBlogs,
-    'ListBlog':ListBlog,
-    'AppHeader' : Header
+  name: 'App',
+
+  components: {
+    HelloWorld,
   },
-  data(){
-    return {
 
-    }
-  }
-}
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-
-</style>
