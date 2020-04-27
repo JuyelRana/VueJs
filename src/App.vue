@@ -1,5 +1,6 @@
 <template>
-  <v-app>
+  <v-app class="grey lighten-4">
+    <Navbar/>
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -7,12 +8,18 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 
 export default {
   name: 'App',
-
+  components:{
+    'Navbar':Navbar
+  },
   data: () => ({
     //
   }),
 };
 </script>
+
+<style>
+</style>
